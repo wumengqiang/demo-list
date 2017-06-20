@@ -1,0 +1,52 @@
+<html>
+<head>
+	<title>close</title>
+    <meta charset='utf8'>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <meta name="renderer" content="webkit" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <link rel="stylesheet" href="./plugins/normalize/normalize.css">
+    <link rel="stylesheet" href="./styles/index.css">
+</head>
+<body id="body">
+    <div class="vue-app">
+        <div class="edit">
+            <title>文本框输入文字后， 查看事件触发顺序</title>
+            <label>请输入内容</label><input class="input-text" 
+                @keydown="record('keydown')"
+                @compositionstart="record('compositionstart')"
+                @compositionupdate="record('compositionupdate')"
+                @compositionend="record('compositionend')"
+                @beforeinput="record('beforeinput')"
+                @input="record('input')"
+                @keyup="record('keyup')"
+                @change="record('change')"
+                @focusin="record('focusin')"
+                @focus="record('focus')"
+                @focusout="record('focusout')"
+                @blur="record('blur')"
+                >
+
+            <p>按键keycode: {{keycode}}</p>
+            <p>触发的事件（先后顺序排序）: {{events.join(",")}}</p>
+        </div>
+        <div class="setting">
+            <title>事件内部执行 event.preventDefault()</title>
+            <label><input type="checkbox" v-model="prevent.keydown" />keydown</label>
+            <label><input type="checkbox" v-model="prevent.compositionstart" />compositionstart</label>
+            <label><input type="checkbox" v-model="prevent.compositionupdate" />compositionupdate</label>
+            <label><input type="checkbox" v-model="prevent.compositionend" />compositionend</label>
+            <label><input type="checkbox" v-model="prevent.input" />input</label>
+            <label><input type="checkbox" v-model="prevent.keyup" />keyup</label>
+            <label><input type="checkbox" v-model="prevent.focusin" />focusin</label>
+            <label><input type="checkbox" v-model="prevent.focus" />focus</label>
+            <label><input type="checkbox" v-model="prevent.focusout" />focusout</label>            
+            <label><input type="checkbox" v-model="prevent.blur" />blur</label>
+        </div>
+
+    </div>
+
+<script type="text/javascript" src="./plugins/vue/vue@2.2.1.js"></script>
+<script type="text/javascript" src="./scripts/index.js"></script>
+</body>
+</html>

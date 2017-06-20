@@ -1,0 +1,26 @@
+title {
+  display: block !important;
+  font-size: 18px;
+  margin-bottom: 20px; }
+
+.vue-app {
+  width: 1200px;
+  margin: 60px auto; }
+  .vue-app .edit {
+    width: 650px;
+    padding: 20px;
+    display: inline-block;
+    vertical-align: top;
+    border: 1px solid #e6e6e6;
+    margin-right: 20px;
+    line-height: 30px; }
+  .vue-app .setting {
+    padding: 20px;
+    width: 300px;
+    display: inline-block;
+    vertical-align: top;
+    border: 1px solid #e6e6e6; }
+    .vue-app .setting label {
+      display: block;
+      height: 30px;
+      line-height: 30px; }

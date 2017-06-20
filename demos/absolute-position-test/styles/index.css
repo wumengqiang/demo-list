@@ -1,0 +1,26 @@
+.vue-app {
+  width: 1200px;
+  margin: 60px auto;
+  text-align: center; }
+  .vue-app .container {
+    position: relative;
+    height: 200px;
+    width: 400px;
+    margin: 0 auto;
+    background: yellow; }
+    .vue-app .container .absolute-center,
+    .vue-app .container .absolute-left,
+    .vue-app .container .absolute-overflow {
+      height: 100px;
+      width: 100px;
+      position: absolute;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      background: purple;
+      margin: auto; }
+    .vue-app .container .absolute-left {
+      right: 50px; }
+    .vue-app .container .absolute-overflow {
+      width: 500px; }

@@ -1,0 +1,30 @@
+<html>
+<head>
+	<title>close</title>
+    <meta charset='utf8'>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <meta name="renderer" content="webkit" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <link rel="stylesheet" href="./plugins/normalize/normalize.css">
+    <link rel="stylesheet" href="./styles/index.css">
+</head>
+<body id="body">
+    <div class="vue-app">
+        <h3> absolute position 水平垂直居中布局 </h3>
+        <p>1. 各个margin等分了剩余的空间量</p>
+        <div class="container">
+            <div class="absolute-center"></div>
+        </div>
+
+        <p>2. 利用该原理使得元素偏左</p>
+        <div class="container">
+            <div class="absolute-left"></div>
+        </div>
+
+        <p>3. 如果该方向上元素大小超过容器大小，margin则不会有变化</p>
+        <div class="container">
+            <div class="absolute-overflow"></div>
+        </div>
+    </div>
+</body>
+</html>

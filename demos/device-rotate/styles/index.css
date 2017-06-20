@@ -1,0 +1,66 @@
+@charset "UTF-8";
+/*  some attribute which listed below don't need compatible mixin,
+    All CSS2.1 property
+    border-radius
+
+ */
+/********** 浏览器兼容部分 start**********/
+/********** 浏览器兼容部分 end**********/
+body {
+  font-family: -apple-system, "Helvetica Neue", Roboto, "Droid Sans", "Arial", "Helvetica", "Segoe UI", "PingFang SC", "Hiragino Sans GB", "STHeiti", "Heiti SC", "Microsoft YaHei", "Microsoft JhengHei", "Source Han Sans SC", "Noto Sans CJK SC", "Source Han Sans CN", "Noto Sans SC", "Source Han Sans TC", "Noto Sans CJK TC", "Microsoft Yahei", "微软雅黑", sans-serif;
+  background-color: white; }
+
+.no-scroll {
+  overflow: hidden; }
+
+.no-touch {
+  pointer-events: none; }
+
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0; }
+
+.page-container {
+  width: 100%;
+  height: 100%; }
+
+.page-main {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -moz-box-orient: vertical;
+  -webkit-box-orient: vertical;
+  box-orient: vertical;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  will-change: transform;
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #fff;
+  overflow: scroll; }
+  .page-main .demo-info {
+    -webkit-box-flex: 0;
+    -moz-box-flex: 0;
+    box-flex: 0;
+    -webkit-flex-grow: 0;
+    flex-grow: 0;
+    height: 230px;
+    position: relative; }
+    .page-main .demo-info header {
+      width: 100%;
+      height: 100%;
+      overflow: hidden; }
+  .page-main main {
+    width: 100%;
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+    box-flex: 1;
+    -webkit-flex-grow: 1;
+    flex-grow: 1; }
