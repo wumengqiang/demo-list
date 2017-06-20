@@ -3,15 +3,48 @@
     width: 1200px;
     margin: 60px auto;
     text-align: center;
-    .container {
+
+    .example-container {
+        width: 100%;
+        height: auto;
+        border: 2px solid #eee;
+        padding: 20px;
+        .explaination {
+            display: inline-block;
+            width: 500px;
+            vertical-align: top;
+            text-align: left;
+            line-height: 25px;
+            padding-right: 20px;    
+            height: 200px;
+            border-right: 1px solid #ccc;
+            margin: 0;
+        }
+        .example {
+            display: inline-block;
+            vertical-align: top;
+            left: 20px;
+        }
+    }
+    .example {
         position: relative;
         height: 200px;
         width: 400px;
         margin: 0 auto;
         background: yellow;
+        text-align: left;
+
+        .absolute-position {
+            position: absolute;
+            background: purple;
+        }
+
+        .absolute-width-auto,
         .absolute-center,
         .absolute-left,
-        .absolute-overflow {
+        .absolute-right,
+        .absolute-overflow,
+        .absolute-fit {
             height: 100px;
             width: 100px;
             position: absolute;
@@ -27,8 +60,24 @@
             right: 50px;
         }
 
+        .absolute-right {
+            right: -50px;
+        }
+
         .absolute-overflow {
             width: 500px;
+        }
+
+        .absolute-fit {
+            left: auto;
+            right: 20px;
+            width: auto;
+        }
+
+        .absolute-width-auto {
+            width: auto;
+            left: 20px;
+            right: 20px;
         }
     }
 }

@@ -10,21 +10,92 @@
 </head>
 <body id="body">
     <div class="vue-app">
-        <h3> absolute position 水平垂直居中布局 </h3>
-        <p>1. 各个margin等分了剩余的空间量</p>
-        <div class="container">
-            <div class="absolute-center"></div>
+        <h3> Absolutely positioned, non-replaced elements 布局 </h3>
+        <!--- demo1 -->
+        <div class="example-container">
+            <p class="explaination">
+                <strong>demo 1： </strong>
+                <br>
+                当设置position: absolute后不设置left,top,right,bottom会自动设置从而保持原来位置
+                <br>
+                计算后的样式: {{ep1}}
+            </p>
+            <div class="example example-1">
+                hello hello hello hello <span class="absolute-position">absolute position element</span>
+            </div>
         </div>
 
-        <p>2. 利用该原理使得元素偏左</p>
-        <div class="container">
-            <div class="absolute-left"></div>
+        <!--- demo2 -->
+        <div class="example-container">
+            <div class="explaination">
+                <strong>demo 2： </strong>
+                <p>各个margin等分了剩余的空间量</p>
+            </div>
+            <div class="example">
+                <div class="absolute-center"></div>
+            </div>
+        </div>
+            
+        <!--- demo3 -->
+        <div class="example-container">
+            <div class="explaination">
+                <strong>demo 3： </strong>
+                <p>设置right: 50px使得元素偏左</p>
+            </div>
+            <div class="example">
+                <div class="absolute-left"></div>
+            </div>
         </div>
 
-        <p>3. 如果该方向上元素大小超过容器大小，margin则不会有变化</p>
-        <div class="container">
-            <div class="absolute-overflow"></div>
+
+        <!--- demo4 -->
+        <div class="example-container">
+            <div class="explaination">
+                <strong>demo 4： </strong>
+                <p>设置right: -50px使得元素偏右</p>
+            </div>
+            <div class="example">
+                <div class="absolute-right"></div>
+            </div>
+        </div>
+
+        <!--- demo5 -->
+        <div class="example-container">
+            <div class="explaination">
+                <strong>demo 5： </strong>
+                <p>如果该方向上元素大小超过容器大小，margin值的设置</p>
+            </div>
+            <div class="example">
+                <div class="absolute-overflow"></div>
+            </div>
+        </div>
+
+        <!--- demo6 -->
+        <div class="example-container">
+            <div class="explaination">
+                <strong>demo 6： </strong>
+                <p>如果left: auto; right:20px width: auto,那么元素宽度会缩小来使得被容器容纳</p>
+            </div>
+            <div class="example">
+                <div class="absolute-fit">测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测
+                    测试测试测试测试测试测试测试测试测
+                </div>
+            </div>
+        </div>
+
+        <!--- demo7 -->
+        <div class="example-container">
+            <div class="explaination">
+                <strong>demo 7： </strong>
+                <p>如果left: 20px; right:20px width: auto,自动计算width的值</p>
+                <p>宽度计算值： {{ep7}}</p>
+            </div>
+            <div class="example">
+                <div class="absolute-width-auto"></div>
+            </div>
         </div>
     </div>
+<script type="text/javascript" src="./plugins/vue/vue@2.2.1.js"></script>
+<script type="text/javascript" src="./scripts/index.js"></script>
 </body>
 </html>

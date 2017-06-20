@@ -2,15 +2,41 @@
   width: 1200px;
   margin: 60px auto;
   text-align: center; }
-  .vue-app .container {
+  .vue-app .example-container {
+    width: 100%;
+    height: auto;
+    border: 2px solid #eee;
+    padding: 20px; }
+    .vue-app .example-container .explaination {
+      display: inline-block;
+      width: 500px;
+      vertical-align: top;
+      text-align: left;
+      line-height: 25px;
+      padding-right: 20px;
+      height: 200px;
+      border-right: 1px solid #ccc;
+      margin: 0; }
+    .vue-app .example-container .example {
+      display: inline-block;
+      vertical-align: top;
+      left: 20px; }
+  .vue-app .example {
     position: relative;
     height: 200px;
     width: 400px;
     margin: 0 auto;
-    background: yellow; }
-    .vue-app .container .absolute-center,
-    .vue-app .container .absolute-left,
-    .vue-app .container .absolute-overflow {
+    background: yellow;
+    text-align: left; }
+    .vue-app .example .absolute-position {
+      position: absolute;
+      background: purple; }
+    .vue-app .example .absolute-width-auto,
+    .vue-app .example .absolute-center,
+    .vue-app .example .absolute-left,
+    .vue-app .example .absolute-right,
+    .vue-app .example .absolute-overflow,
+    .vue-app .example .absolute-fit {
       height: 100px;
       width: 100px;
       position: absolute;
@@ -20,7 +46,17 @@
       bottom: 0;
       background: purple;
       margin: auto; }
-    .vue-app .container .absolute-left {
+    .vue-app .example .absolute-left {
       right: 50px; }
-    .vue-app .container .absolute-overflow {
+    .vue-app .example .absolute-right {
+      right: -50px; }
+    .vue-app .example .absolute-overflow {
       width: 500px; }
+    .vue-app .example .absolute-fit {
+      left: auto;
+      right: 20px;
+      width: auto; }
+    .vue-app .example .absolute-width-auto {
+      width: auto;
+      left: 20px;
+      right: 20px; }
