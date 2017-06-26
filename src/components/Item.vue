@@ -1,16 +1,15 @@
 <template>
   <li class="news-item">
     <span class="title">
-      <template>
         <a :href="'/demos/detail/' + item.name">{{ item.title }}</a>
-      </template>
     </span>
     <br>
     <span class="meta">
       <span class="time">{{ago}}</span> ago
     </span>
-    <router-link :key="tag" :to="'/demos/tags/' + tag" span class="tag" v-if="item.tags && item.tags.length" 
-      v-for="tag in item.tags">{{ tag }}</router-link>
+    <span  v-for="tag in item.tags" :key="tag + item.name">
+      <router-link :to="'/demos/tags/' + tag" class="tag">{{ tag }}</router-link>
+    </span>
   </li>
 </template>
 
@@ -22,12 +21,12 @@ export default {
   name: 'news-item',
   props: ['item'],
   // https://github.com/vuejs/vue/tree/dev/packages/vue-server-renderer#component-caching
-  serverCacheKey: ({ item: { id, __lastUpdated, time }}) => {
-    return `${id}::${__lastUpdated}::${timeAgo(time)}`
+  serverCacheKey: ({ item: { name, time }}) => {
+    return `${name}::${timeAgo(time)}`
   },
   computed: {
     ago: function(){
-      return this.item.time ? timeAgo(moment(this.item.time).unix()) : '';
+      return this.item.time ? timeAgo(moment(this.item.time, "YYYY-MM-DD HH:mm").unix()) : '';
     }
   }
 }

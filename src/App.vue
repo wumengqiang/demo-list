@@ -3,7 +3,6 @@
     <header class="header">
       <nav class="inner">
         <router-link to="/" exact>
-          <img class="logo" src="~public/logo-48.png" alt="logo">
         </router-link>
         <router-link to="/demos/">Demos</router-link>
       </nav>

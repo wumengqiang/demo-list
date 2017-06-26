@@ -1,5 +1,6 @@
 {
     "infoList": [
+        "svg",
         "absolute-position-test",
         "input-event-order",
         "iscroll-fixed-header",
@@ -11,7 +12,7 @@
                 "css",
                 "absolute"
             ],
-            "time": "2017-6-20 18:13:00",
+            "time": "2017-06-20 18:13:00",
             "title": "absolute水平垂直居中原理",
             "name": "absolute-position-test"
         },
@@ -30,7 +31,7 @@
                 "js",
                 "event"
             ],
-            "time": "2017-5-17 21:13:00",
+            "time": "2017-05-17 21:13:00",
             "title": "input输入触发的事件以及顺序",
             "name": "input-event-order"
         },
@@ -43,10 +44,19 @@
             "time": "2016-12-01 10:00:00",
             "title": "iscroll模拟滚动实现fixed header效果",
             "name": "iscroll-fixed-header"
+        },
+        "svg": {
+            "tags": [
+                "svg"
+            ],
+            "time": "2017-06-25 21:13:00",
+            "title": "svg demo列表",
+            "name": "svg"
         }
     },
     "tagList": [
         "js",
+        "svg",
         "css",
         "absolute",
         "event",
@@ -54,6 +64,9 @@
         "deviceorientation"
     ],
     "tagObj": {
+        "svg": [
+            "svg"
+        ],
         "css": [
             "absolute-position-test"
         ],

@@ -97,7 +97,8 @@ function render (req, res) {
   }
 
   const cacheable = isCacheable(req)
-  if (cacheable) {
+  // if (cacheable) {
+   if (false) {
     const hit = microCache.get(req.url)
     if (hit) {
       if (!isProd) {

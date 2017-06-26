@@ -10,8 +10,8 @@
     <transition :name="transition">
       <div class="demos-list" :key="page" v-if="page > 0">
         <transition-group tag="ul" name="item">
-          <item v-for="item in demos.data" :key="item.name" :item="item">
-          </item>
+          <demo v-for="(demo, index) in demos.data" :key="index + demo.name" :item="demo">
+          </demo>
         </transition-group>
       </div>
     </transition>
@@ -20,7 +20,7 @@
 
 <script>
 import { watchList } from '../api'
-import Item from '../components/Item.vue'
+import Demo from '../components/Item.vue'
 
 export default {
   name: 'item-list',
@@ -33,7 +33,7 @@ export default {
   title: "demo列表",
 
   components: {
-    Item
+    Demo
   },
 
   props: {
