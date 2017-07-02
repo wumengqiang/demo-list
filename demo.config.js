@@ -17,7 +17,7 @@ module.exports = {
       ref: 'origin/master',
       repo: 'git@github.com:wumengqiang/demo-list.git',
       path: '/data/wmq/projects/demo-list',
-      'post-deploy': 'gulp demo-info',
+      'post-deploy': 'yarn;gulp demo-info',
       env : {
         "NODE_ENV": "production"
       }
